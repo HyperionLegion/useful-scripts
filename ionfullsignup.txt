@@ -1,0 +1,39 @@
+
+var window;
+var timerId;
+
+let z = () => {
+    clearInterval(timerId);
+}
+
+let a = () => {
+var capacity = window.jsonData['751'].roster.capacity;
+var signups = window.jsonData['751'].roster.count;
+if capacity !- signups
+{
+	var node = window.document.querySelectorAll('[data-activity-id="751"]');
+	  node[0].click();
+ var button = window.document.getElementById("signup-button");
+        button.click();
+window.close();
+         } 
+}
+
+let v = () => {
+
+var windowNew = window.open('https://ion.tjhsst.edu/eighth/signup/4009', '_blank');
+setTimeout( () => {var capacity = windowNew.jsonData['751'].roster.capacity;
+var signups = windowNew.jsonData['751'].roster.count;
+var capacity = windowNew.jsonData['751'].roster.capacity;
+if (capacity != signups)
+{
+	var node = windowNew.document.querySelectorAll('[data-activity-id="751"]');
+	  node[0].click();
+ var button = windowNew.document.getElementById("signup-button");
+        button.click();
+windowNew.close();
+         } 
+}, 10000);
+}
+
+timerId = setInterval(v, 10000);
