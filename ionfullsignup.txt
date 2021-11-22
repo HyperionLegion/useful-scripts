@@ -4,19 +4,7 @@ var timerId;
 
 let z = () => {
     clearInterval(timerId);
-}
-
-let a = () => {
-var capacity = window.jsonData['751'].roster.capacity;
-var signups = window.jsonData['751'].roster.count;
-if capacity !- signups
-{
-	var node = window.document.querySelectorAll('[data-activity-id="751"]');
-	  node[0].click();
- var button = window.document.getElementById("signup-button");
-        button.click();
-window.close();
-         } 
+	console.log('end');
 }
 
 let v = () => {
@@ -31,9 +19,12 @@ if (capacity != signups)
 	  node[0].click();
  var button = windowNew.document.getElementById("signup-button");
         button.click();
-windowNew.close();
+setTimeout( () => {windowNew.close(); z();}, 3000);
          } 
-}, 10000);
+else {
+	setTimeout( () => {windowNew.close()}, 3000);
+}
+}, 3000);
 }
 
 timerId = setInterval(v, 10000);
